@@ -31,7 +31,7 @@ document.querySelector('.hamburger').addEventListener('click', function() {
   }
   
 
-/* Zom a las imagenes de info3*/
+/* efecto de navideño para el puntero*/
 document.addEventListener('mousemove', function(e) {
   for (var i = 0; i < 1; i++) { 
     var estrellita = document.createElement('div');
