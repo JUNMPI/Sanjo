@@ -881,12 +881,12 @@ p {
   .container{
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin-top: 20rem !important;
+    margin-top: 1rem !important;
   }
   .mapa iframe{
-    height: 400px;
-  }
-}
+    display: none;
+  } 
+
 
 /*------------------los contactos-----------------------------*/
 
