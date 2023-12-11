@@ -1,1 +1,1362 @@
+/* Junior */
+*{
+	box-sizing:border-box;
+}
+.contenedor{
+	margin:0 auto;
+	width:100%;
+}
+/*              */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1b1b;
+  }
+  
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;  /* Esto controla el ancho del contenido del menú */
+    margin: 0 auto;  /* Esto centra el contenido del menú */
+  }
+  
+  .menu {
+    display: flex;
+  }
+  
+  .menu li {
+    list-style-type: none;
+  }
+  
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-family: 'Teko', sans-serif;  /* Aplica la fuente Teko a los enlaces del menú */
+    font-weight: normal;
+    font-size: 19px;
+  }
+  
+  .menu li a:hover {
+    color: #ecab0f;  /* Esto cambia el color del texto a naranja cuando el cursor pasa sobre el enlace */
+  }
+
+/* Pie de pagina */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #1b1b1b;
+    color:white;
+    font-family: 'Merriweather', serif;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.pie1, .Red-Social, .contact-info, .horario{
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    margin-top: 5px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+.pie1 p {
+    text-align: justify;
+}
+
+.footer h3 {
+    margin-top: 10px;  /* Esto añade un margen superior a los títulos */
+    margin-left: 50px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+.zoom {
+  transition: transform .2s; /* Animación */
+}
+/*responsive*/
+/* Estilos para televisores */
+@media (min-width: 1824px) {
+  .header-inner, .footer {
+    width: 100%;
+  }
+  .hamburger {
+    display: none;
+  }
+  
+  .estrellita {
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999;
+    width: 30px; /* Ajusta el tamaño de la imagen */
+    height: 30px; /* Ajusta el tamaño de la imagen */
+    background-image: url('../img/estrellas.png'); /* Cambia esto a la ruta de tu imagen */
+    background-size: cover;
+  }
+
+
+
+}
+
+/* Estilos para PC */
+@media (min-width: 1224px) and (max-width: 1823px) {
+  .footer {
+    width: 100%;
+  }
+ 
+  .hamburger {
+    display: none;
+  }
+  
+  .estrellita {
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999;
+    width: 30px; /* Ajusta el tamaño de la imagen */
+    height: 30px; /* Ajusta el tamaño de la imagen */
+    background-image: url('../img/estrellas.png'); /* Cambia esto a la ruta de tu imagen */
+    background-size: cover;
+  }
+
+
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1223px) {
+  .header-inner {
+    width: 70%;
+  }
+  .footer{
+    width: 100%;
+  }
+  .hamburger {
+    display: none;
+  }
+  
+
+  .InfoInicio2 .tex1{
+    font-size: 50px;
+    text-align: center;
+    margin: -100px; /* Esto elimina los márgenes */
+    padding: -30px; /* Esto reduce el relleno */
+    margin-bottom: 120px;
+   
+  }
+  .InfoInicio2 .tex2{
+  font-size: 16px;
+  text-align: center;
+  margin: -200PX;
+  padding: 90px; /* Esto reduce el relleno */
+  margin-bottom: -100px;
+ 
+  }
+
+  .bloque2 {
+    width: 55%;
+  }
+  .bloque2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Esto centra los elementos horizontalmente */
+  justify-content: center; /* Esto centra los elementos verticalmente */
+
+  }
+
+  .bloque2 {
+    flex-direction: column; /* Esto coloca los elementos en una columna */
+  }
+  
+  .bloque2 img {
+    width: 300px; /* Cambia '100px' al ancho que desees */
+    height: 200px; /* Esto mantiene la proporción de la imagen */
+    margin-bottom: 30px;
+  }
+  
+  .bloque3{
+    background-size: 50%;
+    margin: 0px; /* Esto elimina los márgenes del bloque */
+    padding: 0px; /* Esto elimina el relleno del bloque */
+  }
+  
+  }
+  .bloque4{
+    .img-izq {
+      position: absolute;
+      top: 225px;
+    }
+    
+    .img-der {
+      position:absolute;
+    }
+  
+    .p{
+      font-size: 40px;
+      text-align: center;
+     
+    }
+
+ 
+  }
+  
+ 
+
+  
+  
+
+/* Estilos para celulares */
+@media (max-width: 767px) {
+  .header-inner {
+    width: 50%;
+  }
+  .footer{
+    width: 100%;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu li a {
+    padding: 10px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+   
+  }
+
+  .pie1, .Red-Social, .contact-info, .horario {
+    margin-bottom: 20px;
+   
+  }
+  /* Menu hamburguesa*/
+
+
+.menu {
+  display: block;
+  position: absolute;  /* Esto hace que el menú se posicione en relación con el encabezado */
+  top: 10%;  /* Esto posiciona el menú justo debajo del encabezado */
+  left: 0;
+  width: 100%;  /* Esto hace que el menú tenga el ancho completo */
+  background-color: #1b1b1b;  /* Esto da al menú un fondo negro */
+  text-align: center;
+  z-index: 1;  /* Esto asegura que el menú se muestre encima del contenido de la página */
+  max-height: 0;  /* Inicialmente, el menú no tiene altura */
+  overflow: hidden;  /* Esto evita que el contenido del menú se desborde */
+  transition: max-height 0.6s ease-in-out;  /* Esto anima el cambio de altura */
+}
+
+@media (max-width: 767px) {
+  .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.hamburger {
+  display: none;
+  background-color: #1b1b1b;  /* Esto cambia el color de fondo del botón */
+  color: #ecab0f;  /* Esto cambia el color de las líneas del botón */
+  border: none;  /* Esto elimina los bordes del botón */
+  font-size: 20px;  /* Esto hace que el botón sea un poco más grande */
+  padding: 5px;  /* Esto añade un poco de espacio alrededor del botón */
+}
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+
+.InfoInicio2 {
+  padding: 20px;
+  align-items: center; /* Ajusta este valor según tus necesidades */
+  text-align: center;
+}
+
+.InfoInicio2 .tex1{
+  font-size: 36px;
+  text-align: center;
+  margin: -100px; /* Esto elimina los márgenes */
+  padding: -30px; /* Esto reduce el relleno */
+  margin-bottom: 120px;
+}
+
+.InfoInicio2 .tex2{
+  font-size: 14px;
+  text-align: center;
+  margin: -200PX;
+  padding: 90px; /* Esto reduce el relleno */
+  margin-bottom: -100px;
+}
+
+.bloque2 {
+  width: 55%;
+}
+.bloque2 {
+  display: flex;
+flex-direction: column;
+align-items: center; /* Esto centra los elementos horizontalmente */
+justify-content: center; /* Esto centra los elementos verticalmente */
+padding: 0px;
+}
+
+.bloque2 {
+    flex-direction: column;
+    /* Esto coloca los elementos en una columna */
+}
+
+.bloque2 img {
+  width: 150px; /* Cambia '100px' al ancho que desees */
+  height: 150px; /* Esto mantiene la proporción de la imagen */
+  margin-bottom: 30px;
+}
+
+
+.bloque3 {
+  margin-top: -50px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: -210px;
+  position: relative;
+  padding: 100px 170px 250px 170px;
+}
+
+  
+  .bloque3 {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10px;
+  }
+
+
+.bloque31, .bloque32, .bloque33 {
+  background-size: cover;
+  text-align: center;
+}
+
+.bloque4{
+  display: none;
+} 
+
+.bloque51 {
+  display: flex; 
+  flex-direction: column;
+  align-items: center; /* Esto centra los elementos horizontalmente */
+  justify-content: center; /* Esto centra los elementos verticalmente */
+}
+
+.bloque511 {
+  width: 100%; /* Esto hace que el bloque ocupe todo el ancho disponible */
+}
+
+.bloque512 {
+  width: 100%; /* Esto hace que el bloque ocupe todo el ancho disponible */
+}
+
+
+}
+/* Junior */
+/* primera parte*/
+h2 {
+  font-family: 'Teko', sans-serif;  
+  font-size: 46px; 
+}
+
+p {
+  font-family: 'Merriweather', serif;
+  font-size: 16px; 
+}
+
+.InfoInicio::after{
+	content:"";
+	clear:both;
+	display:table;
+}
+
+
+.InfoInicio2 img{
+	max-width:100%;
+}
+
+.InfoInicio2{
+	background-image:url('../img/ImgInicio.jpg');
+	background-size:cover;
+	text-align:center;
+	padding:0px ;
+	margin-bottom:40px;
+ 
+	
+}
+.InfoInicio2 div{
+	background:rgba(0,0,0,0.7);
+	font-size:5em;
+	padding:230px 220px;
+
+}
+
+.tex1{
+  font-family: 'Teko ', sans-serif;  
+  font-weight: bold;
+  color: white;
+  font-size: 50px;  /* Ajusta este valor según tus necesidades */
+  text-align: center;
+}
+
+.tex2{
+  color:white;
+  font-family: 'Merriweather', serif;
+  font-size: 16px; 
+  text-align: center;
+}
+
+.boton{
+  font-family: 'Teko', sans-serif;  
+  font-size: 18px;  /* Ajusta este valor según tus necesidades */
+  color: white;  /* Color del texto */
+  font-weight: bold;
+  background-color: #c20000;  /* Color de fondo del botón */
+  border: none;  /* Sin bordes */
+  padding: 15px 32px;  /* Espacio alrededor del texto */
+  text-align: center;  /* Centra el texto */
+  text-decoration: none;  /* Sin subrayado */
+  display: inline-block;
+  margin: 4px 2px;  /* Margen alrededor del botón */
+  cursor: pointer;  /* Cambia el cursor al pasar el mouse */
+  position: relative;  /* Posiciona la flecha relativa a este botón */
+  transition: all 1s;  /* Agrega una transición suave */
+}
+
+.boton:hover{
+  background-color: #1b1b1b;  /* Color de fondo del botón cuando el mouse pasa por encima */
+  color: #ecab0f;  /* Color del texto cuando el mouse pasa por encima */
+}
+.boton:hover::after{
+  content: " ➡";  /* Agrega una flecha cuando el mouse pasa por encima */
+ 
+}
+/* ovalo al final*/
+.InfoInicio2 {
+  border-bottom-left-radius: 50% 50px; /* Esto da un borde ovalado a la parte inferior izquierda */
+  border-bottom-right-radius: 50% 50px; /* Esto da un borde ovalado a la parte inferior derecha */
+  overflow: hidden; /* Esto asegura que el contenido no se desborde fuera del borde ovalado */
+  box-shadow: inset 0 -30px 30px rgb(255, 255, 255); /* Esto añade un efecto de sombra interna blanca en la parte inferior */
+}
+
+
+/* Junior */
+/* Segunda Parte*/
+
+.bloque2 {
+  display: flex; /* Esto alinea los elementos uno al lado del otro */
+  margin: 0 auto; /* Esto centra el div en la página */
+  margin-top: 50px;
+  max-width: 70%; /* Esto evita que el div se extienda hasta los bordes de la página */
+  margin-bottom: 100px;
+}
+
+.bloque2 img {
+  width: 500px; /* Cambia '100px' al ancho que desees */
+  height: 400px; /* Esto mantiene la proporción de la imagen */
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6); /* Esto le da a la imagen un efecto de sombra en los cuatro lados */
+  margin-right: 20px; /* Esto añade un margen a la derecha de la imagen */
+}
+
+.bloque21{
+  text-align: justify; /* Esto justifica el texto */
+  margin-left: 30px;
+}
+.bloque21 h2{
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Junior */
+/* Tercera parte*/
+
+
+.Info3 h2 {
+  text-align: center; /* Esto centra el texto del h2 */
+  font-weight: bold;
+  font-size: 46px;
+}
+
+
+.bloque3 {
+  margin-top: -50px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: -210px;
+  position: relative;
+  padding: 100px 170px 250px 170px;
+
+  .bloque31{
+    background-image:url('../img/serv1.png');
+    background-size:cover;
+    text-align:center;
+    
+  
+  }
+
+  .bloque32{
+    background-image:url('../img/serv2.png');
+    background-size:cover;
+    text-align:center;
+    
+  }
+  .bloque33{
+    background-image:url('../img/serv3.png');
+    background-size:cover;
+    text-align:center;
+  
+  }
+
+  
+}
+
+.bloque3 div{
+  background:rgba(0,0,0,0.7);
+  font-size:5em;
+  padding:230px 220px;
+
+}
+
+.bloque31 p, .bloque32 p, .bloque33 p {
+  font-family: 'Teko ', sans-serif;  
+  font-weight: bold;
+  color: white;
+  font-size: 25px; /* Esto aumenta el tamaño del texto */
+  
+}
+.butt {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* Junior */
+/* Cuarta Parte parte*/
+
+.bloque4 img{
+  max-width:15%;
+}
+
+.bloque4{
+  background-image:url('../img/banner.jpeg');
+  background-size:cover;
+  text-align:center;
+  position: relative; /* Añadido para permitir el posicionamiento absoluto de las imágenes */
+  padding: 0px; /* Ajusta el relleno interno del contenedor */
+  margin: 20px 0; /* Ajusta los márgenes externos del contenedor */
+  margin-bottom:100px;
+}
+
+.bloque4 div{
+  background:rgba(0,0,0,0.7);
+  font-size:5em;
+  padding:230px 220px;
+}
+
+.bloque4 p{
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+ 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.img-izq {
+  margin-top: 25px;
+  margin-bottom: 3px;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  animation: spin 5s linear infinite;
+}
+
+.img-der {
+  margin-top: 50px;
+  margin-bottom: 3px;
+  
+  position: absolute;
+  top: 225px;
+  right: 60px;
+  animation: spin 5s linear infinite;
+}
+
+/* Junior */
+/* Quinta Parte*/
+.bloque51{
+  display: flex; 
+  justify-content: space-between;
+}
+.bloque511{
+  width: 45%;
+}
+.bloque512{
+  width: 45%;
+}
+.Info{
+  margin-bottom: 100px;
+  margin-left: 60px;
+  margin-right: 60px;
+  position: static;
+}
+
+.progress {
+  margin-bottom: 15px;
+}
+
+.Info h2{
+  text-align: center;
+  font-weight: bold;
+  
+}
+.bloque51{
+  margin-top:  30px;
+}
+
+
+/*------------------------- ESTILOS PARA SERVICIOS SHERAL---------------------------*/
+
+.ser1{
+  position: relative;
+  width: 100%;
+  height: 300px; /* Altura de la sección */
+  background-image: url('../img/fondo2.png'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Ajuste de tamaño de la imagen */
+  background-position: center; /* Posición de la imagen */
+  
+}
+
+.ser1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+}
+
+.text {
+  position: absolute;
+  top: 50%; /* Alineación vertical */
+  left: 50%; /* Alineación horizontal */
+  width:80%;
+  height:auto;
+  transform: translate(-50%, -50%); /* Centrar el texto */
+  /*background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+  padding: 20px; /* Espaciado interno */
+  color: white; /* Color del texto */
+ 
+  font-family: 'Teko ', sans-serif;  
+}
+
+.h2Ser{
+  font-family: 'Teko ', sans-serif;  
+  font-weight: bold;
+  color: white;
+  font-size: 50px;  /* Ajusta este valor según tus necesidades */
+}
+
+/*-----------------------------------------*/
+.ser2 {
+  display: flex;
+  margin-bottom: -100px; 
+}
+
+.columnaIzquierda{
+  width: 50%;
+  height: 700px;
+
+  background-color: none;
+
+  display:flex;
+
+  background-image: url('../img/porton.png');
+}
+
+.columnaDerecha {
+  width: 50%;
+  height: 700px;
+  color: #2E2E2E;
+  background-color: none;
+  margin: 10px;
+
+  display: flex;
+  flex-wrap: wrap; /* Ajuste de envoltura */
+}
+
+@media screen and (max-width: 1240px) {
+  .ser2 {
+    flex-direction: column; /* Cuando la pantalla se reduce a 600px o menos, las sectiones se colocan en una columna */
+  }
+  .columnaIzquierda, .columnaDerecha{
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*-------------------------------------------------*/
+
+.box {
+  width: 100%; /* Ancho completo en pantallas pequeñas */
+  height: 300px; /* Altura deseada */
+  box-sizing: border-box; /* Incluir padding en el ancho */
+  margin-bottom:50px; /* Espaciado inferior */
+
+  display: flex;
+
+  background-color: none;
+  transition: background-color 0.8s ease;
+  transition: transform 0.9s; /*para tamaño de box*/
+
+}
+
+@media screen and (min-width: 768px) {
+  .box {
+    width: 50%; /* Ancho del 50% en pantallas más grandes */
+  }
+}
+
+.box:hover {
+  background-color: none; /* Cambia el color cuando el cursor pasa sobre la sección */
+  transform: scale(1.1);
+}
+
+/**/
+.izquierda{
+  width: 20%;
+  height: 50px;
+}
+
+.derecha{
+  text-align: justify;
+  width: 60%;
+  height: 50px;
+  color: #424242;
+}
+
+/*------------------------- FIND ESTILOS PARA SERVICIOS ---------------------------*/
+
+/*------------------------- Etilos para Contactos Luis ----------------------------*/
+
+.reser1{
+  position: relative;
+  width: 100%;
+  height: 300px; /* Altura de la sección */
+  background-image: url('../img/porton.png'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Ajuste de tamaño de la imagen */
+  background-position: center; /* Posición de la imagen */
+}
+
+.reser1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+}
+
+.text {
+  position: absolute;
+  top: 50%; /* Alineación vertical */
+  left: 50%; /* Alineación horizontal */
+  width:80%;
+  height:auto;
+  transform: translate(-50%, -50%); /* Centrar el texto */
+  /*background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+  padding: 20px; /* Espaciado interno */
+  color: white; /* Color del texto */
+ 
+  font-family: 'Teko ', sans-serif;  
+}
+
+.h2Reser{
+  font-family: 'Teko ', sans-serif;  
+  font-weight: bold;
+  color: white;
+  font-size: 50px;  /* Ajusta este valor según tus necesidades */
+}
+/*----------------------------estilos para cuadro del mensaje y mapa-----------*/
+.container{
+  width: 800px; /* Cambia '100px' al ancho que desees */
+  height: 600px;
+  max-width: 960px;
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6); /* Esto le da a la imagen un efecto de sombra en los cuatro lados */
+  margin-right: 20px; /* Esto añade un margen a la derecha de la imagen */
+  box-shadow: 0 0 1rem hsla(0 0 0 /16%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+
+.form-container{
+  padding: 20px;
+}
+
+.form-container h3{
+  font-family: 'Teko', sans-serif;  
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.contacto-form{
+  display: grid;
+  row-gap: 1rem;
+}
+
+.contacto-form input{
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6); /* Esto le da a la imagen un efecto de sombra en los cuatro lados */
+  margin-right: 1px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #000000;
+  border-radius: 0.4rem;
+}
+.contacto-form textarea{
+  resize: none;
+  height: 200px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6); /* Esto le da a la imagen un efecto de sombra en los cuatro lados */
+  margin-right: 1px;
+}
+
+.contacto-form .send-button{
+  border: none;
+  outline: none;
+  background: #00dbde;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.contacto-form .send-button:hover{
+  background: hsl(181, 100%, 44%, 0.8);
+  transition: 0.3s all linear;
+}
+
+.mapa iframe{
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 964px){
+  .container{
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+@media (max-width: 700px){
+  .container{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem !important;
+  }
+  .mapa iframe{
+    display: none;
+  } 
+
+  
+  
+}
+
+/*------------------los contactos-----------------------------*/
+
+.ubi1{
+ 
+  background-image: url('../img/fondo4.jpeg'); /* Ruta de la imagen de fondo */
+  position: relative;
+  width: 100%;
+  height: 300px; /* Altura de la sección */
+  background-position: center; /* Posición de la imagen */
+  margin-bottom: -100px;
+}
+
+.ubi1::before {
+  content: "";
+  position:absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+}
+.nuevo {
+  display: flex;
+  height:auto;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: white;
+  font-family: 'Merriweather', serif;
+  padding: 20px;
+  margin-top: 80px;
+}´
+
+/*--------------------------Fin de estilos contactos--------------------------*/
+
+/*--- By: Branz Saul  ---*/
+/*--- Estilos para la pagina de Admisión 2024---*/
+
+
+.images .matricula img {
+  margin-top: 20px;
+  width: 150px;
+}
+
+.images .student img {
+  background-size: cover;
+  border-radius: 3%;
+
+}
+
+.images h1 {
+
+  font-size: 4rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  color: #c20000;
+}
+
+#anio {
+  font-size: 7rem;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  text-shadow: 6px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.images {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+
+
+.images div {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  height: 407px;
+  width: 612px;
+  border-radius: 3%;
+  box-shadow: 10px 3px 15px rgba(0, 0, 0, 0.5);
+  /* position: absolute; */
+}
+
+.tipos_Matricula h2 {
+  font-family: 'Teko', sans-serif;
+  color: #c20000;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.pass p {
+  font-family: 'Merriweather', serif;
+
+
+}
+
+.pasito {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.tipos_Matricula div img {
+  width: 100px;
+}
+
+.tipos_Matricula div article .passIcono {
+  width: 40px;
+}
+
+.tipos_matricula {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.tipos_matricula .column {
+  flex: 1;
+  padding: 5px;
+  /* border: 1px solid #ddd; */
+  box-sizing: border-box;
+}
+
+.tipos_Matricula div article  {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.tipos_Matricula div article div {
+  display: block;
+  text-align: left;
+  margin-left: 20px;
+}
+
+
+/*------------Parte Brayan Guzman-----------------*/
+
+/*ser1 el degradado obtenido de sheral*/
+
+.contieneSuperior{
+  padding-top: 80px;
+  padding-left: 13%;
+  padding-right: 13%;
+  position: relative;
+  color: white;
+}
+
+.titulo1{
+  font-family: 'Teko ', sans-serif;  
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.descripcion{
+  font-size: 15px;
+  text-align: justify;
+}
+
+/*-----------------*/
+
+.equipoDocente{
+  display: flex;
+  padding-top: 50px;
+  align-items: center;
+  padding-left: 13%;
+  padding-right: 10%;
+  margin-bottom: 60px;
+}
+
+.equipoDocente img{
+  flex:0 1 auto;
+  align-self:auto;
+  height:auto;
+  width:48%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.equipoDocente img:hover{
+  transform: scale(1.1);
+}
+
+
+.contenidoDocente{
+  padding: 0 28px;
+}
+
+.titulo2{
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.cita {
+  border: none;
+  font-size: 20px;
+  border-radius: 50px;
+  background-color: hsl(0, 100%, 50%);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.cita:hover {
+  box-shadow: inset 0 0 0 50px hsl(0, 100%, 38%);
+  color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .equipoDocente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titulo2 {
+    order: 1;
+    text-align: center;
+  }
+
+  .cita {
+    position:static;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 5%;
+    padding-right: 5%;  
+  }
+
+  .equipoDocente img {
+    width: 90%;
+    padding-top: 25px;
+    order: 2;
+  }
+}
+
+
+
+/*-----------------*/
+
+.MisionVision{
+  background-color: #c20000;
+}
+
+.MiVi{
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+.grupoMisile{
+  display:flex;
+  justify-content:space-around;
+  align-content:center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 40px;
+}
+
+.rectangulo {
+  width: 30%;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.rectangulo::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.vision,.mision,.lema{
+  position: relative;
+  background-size: cover;
+} 
+
+.vision:hover,.mision:hover,.lema:hover{
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.vision{
+  background-image: url('../img/visión.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top:2%;
+  padding-left: 3%;
+  padding-right: 30px;
+}
+
+.subtitulo{
+  color: white;
+  position: relative;
+  font-family: 'Teko ', sans-serif;  
+  font-weight: bold;
+  font-size: 25px;
+  
+}
+
+.texto{
+  color: white;
+  position: relative;
+}
+
+.mision{
+  background-image: url('../img/mision.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top:2%;
+  padding-left: 3%;
+  padding-right: 30px;
+}
+
+.pequenio{
+  font-size: 15px;
+}
+
+.lema{
+  background-image: url('../img/lema.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top:2%;
+  padding-left: 3%;
+  padding-right: 30px;
+}
+
+.grande{
+  font-size: 18px;
+  padding: 5%;
+  
+}
+
+@media screen and (max-width: 1000px) {
+  .grupoMisile {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .rectangulo {
+    width: 90%; 
+    margin-bottom: 20px;
+  }
+
+  .grande{
+    padding: 1%;
+  }
+}
+
+/*------------------------------------------------*/
+
+.historia{
+  padding-top: 30px;
+}
+
+.titulo3{
+  font-family: 'Teko ', sans-serif;  
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;  
+}
+
+.cuerpo{
+  display: flex;
+  padding-left: 15%;
+  padding-right: 10%;
+}
+
+.Karl{
+  flex:0 1 auto;
+  align-self:center;
+  padding-top: 30px;
+  height:30%;
+  width:30%;  
+  border-width: 2px;
+  border-style: groove;
+  border-color: #000000;
+}
+
+.cuerpoHistoria{
+  padding-left: 15%;
+  text-align: justify;
+}
+
+@media screen and (max-width: 1000px) {
+  .titulo3{
+    margin-bottom: none;
+    font-size:30px;
+  }
+
+  .cuerpo {
+    flex-direction: column; /* Cambia la dirección del flexbox a columna */
+    padding-left: 5%; /* Ajusta el padding para mantener el espacio */
+    padding-right: 5%;
+  }
+
+  .Karl {
+    width: 50%;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    height: auto;
+  }
+
+  .cuerpoHistoria {
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+  }
+}
+
+
+
+.himno{
+  margin-top: 50px;
+  margin-bottom: -80px;  
+  position: relative;
+  width: 100%;
+  height: 100%; /* Altura de la sección */
+  background-image: url('../img/catedral.png'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Ajuste de tamaño de la imagen */
+  background-position: center;
+}
+
+.himno::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(3, 2, 2, 0.7); /* Fondo oscuro con opacidad */
+}
+
+.titulo4{
+  padding-top: 50px;
+  text-align: center;
+  font-family: 'Teko ', sans-serif;  
+  font-size: 40px;
+  position: relative;
+  color: white;
+}
+
+.estro{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.estrofa{
+  color: white;
+  position: relative;
+  padding: 0;
+}
+
+/*------------------------------------------------*/
 
